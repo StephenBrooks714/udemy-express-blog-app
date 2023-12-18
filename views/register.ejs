@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body class="user-bg">
+
+<%- include('layouts/navBar') -%>
+
+<main class="container" style="margin-top: 140px; margin-bottom: 90px;">
+    <div class="row justify-content-center align-items-center flex-center d-flex mx-auto">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <% if(errors != null && errors.length > 0) {%>
+                <ul class="list-group">
+                    <% for(var i = 0; i < errors.length; i++){ %>
+                        <li class="list-group-item list-group-item-danger">
+                            <%= errors[i] %>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+            <h1 class="text-black-50">Register for an account</h1>
+            <form action="/store/user" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="username" class="form-label text-dark">Username</label>
+                        <input type="text" name="username" id="username" class="mb-3 form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label text-dark">Email</label>
+                        <input type="email" name="email" id="email" class="mb-3 form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="password" class="form-label text-dark">Password</label>
+                        <input type="password" name="password" id="password" class="form-control">
+                    </div>
+                </div>
+                <p class="mb-3 text-white">Already have an account? <a href="/login" class="text-white-50">Login here</a>.</p>
+                <button class="btn btn-blue text-white rounded-pill" type="submit">register for access</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<%- include('layouts/footer') -%>
+
+</body>
+<%- include('layouts/scripts') -%>
+</html>

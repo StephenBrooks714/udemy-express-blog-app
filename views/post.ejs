@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+
+<header>
+    <%- include('layouts/navBar') -%>
+</header>
+
+<main class="container my-5 py-5">
+    <div class="row justify-content-center align-items-center flex-center text-center d-flex mx-auto" style="margin-top: 40px; margin-bottom: 30px;">
+        <div class="col-lg-10">
+            <p>Posted On: <%= post.datePosted.toLocaleDateString() %></p>
+            <h1 class="display-4"><%= post.title %></h1>
+            <h2><strong class="text-black-50">Posted By:</strong> <%= post.userid.username %></h2>
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-6 mb-3">
+                    <img src="<%= post.image %>" class="img-thumbnail" alt="<%= post.title %>">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <img src="<%= post.image2 %>" class="img-thumbnail" alt="<%= post.title %>">
+                </div>
+                <div class="col-md-12">
+                    <p>
+                        <%= post.body %>
+                    </p>
+                    <% if(loggedIn) { %>
+                        <a href="/delete/post/<%= post._id %>" class="btn btn-outline-warning">Delete Post</a>
+                    <% } %>
+                    <a href="/blogs" class="btn btn-outline-primary">All Blogs</a>
+                    <a href="/" class="btn btn-outline-info">Home Page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('layouts/footer') -%>
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

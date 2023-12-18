@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body class="user-bg">
+
+<%- include('layouts/navBar') -%>
+
+<main class="container">
+    <div class="row justify-content-center align-items-center flex-center d-flex mx-auto" style="height: 100vh;">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <h1 class="text-black-50">Login for Access</h1>
+            <form action="/login/user" method="post" enctype="multipart/form-data">
+                <label for="username" class="form-label text-dark">Username</label>
+                <input type="text" name="username" id="username" class="mb-3 form-control" />
+                <label for="password" class="form-label text-dark">Password</label>
+                <input type="password" name="password" id="password" class="form-control" />
+                <p class="mb-3 text-dark">Don't have an account?
+                    <a href="/register" class="text-white font-weight-bold">Register here</a>.</p>
+                <button class="btn btn-blue text-white rounded-pill" type="submit">login to your account</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<%- include('layouts/footer') -%>
+</body>
+<%- include('layouts/scripts') -%>
+</html>

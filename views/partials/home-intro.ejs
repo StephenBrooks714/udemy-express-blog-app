@@ -1,0 +1,22 @@
+<div class="home-bg">
+    <div class="container-fluid">
+        <div class="row flex-center d-flex mx-auto justify-content-center align-items-center" style="height: 100vh;">
+            <div class="col-lg-10 text-start">
+                <h1 class="display-2 fw-bold">
+                    <span class="text-primary">Demo</span>
+                    <span class="text-white-50">Home</span>
+                    <span class="text-primary">Page</span>
+                </h1>
+                <p class="text-uppercase text-white h4">
+                    Built this app with HTML, CSS, & JavaScript. Using Node.js for the server and MongoDB for the database.
+                </p>
+                <% if(!loggedIn) { %>
+                    <a href="/register" class="btn btn-blue text-white btn-lg">Get Access</a>
+                <% } else { %>
+                    <a href="/newPost" class="btn btn-blue text-white btn-lg">Create A Post</a>
+                <% } %>
+                <a href="https://www.atranetmarketingagency.com/gallery" target="_blank" class="btn btn-outline-info btn-lg">View More</a>
+            </div>
+        </div>
+    </div>
+</div>

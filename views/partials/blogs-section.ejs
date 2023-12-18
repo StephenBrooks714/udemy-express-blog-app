@@ -1,0 +1,66 @@
+<section class="row justify-content-center text-center mt-5 pt-3">
+    <div class="col-lg-10 mb-4">
+        <h3 class="h1"><span class="text-yellow">Javascript</span> & Express Post</h3>
+        <hr class="line">
+        <p class="justify-content-center text-muted">
+            The post below are created with a JavaScript built language for talking to a database called MongoDB
+            through a server language called Node. A fast way to implement backend and front end coding rendered
+            to pages for dynamic use.
+        </p>
+    </div>
+    <% if(blogs < 3){ %>
+        <a href="/post/<%= blogs[i]._id %>">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                <p class="h4 mb-2"><%= blogs[i].title %></p>
+                <img src="<%= blogs[i].image %>"
+                     class="img-fluid shadow-lg rounded"
+                     alt="Express Demo App"
+                />
+                <p>
+                    <%= blogs[i].datePosted.toLocaleString() %>
+                </p>
+            </div>
+        </a>
+    <% } else { %>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <p class="h4 mb-2">Post Title</p>
+            <img src="https://placehold.co/600x400"
+                 class="img-fluid shadow-lg rounded"
+                 alt="Express Demo App"
+            />
+            <p>
+                Posted On March 20, 2023
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <p class="h4 mb-2">Post Title</p>
+            <img src="https://placehold.co/600x400"
+                 class="img-fluid shadow-lg rounded"
+                 alt="Express Demo App"
+            />
+            <p>
+                Posted On March 20, 2023
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <p class="h4 mb-2">Post Title</p>
+            <img src="https://placehold.co/600x400"
+                 class="img-fluid shadow-lg rounded"
+                 alt="Express Demo App"
+            />
+            <p>
+                Posted On March 20, 2023
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <p class="h4 mb-2">Post Title</p>
+            <img src="https://placehold.co/600x400"
+                 class="img-fluid shadow-lg rounded"
+                 alt="Express Demo App"
+            />
+            <p>
+                Posted On March 20, 2023
+            </p>
+        </div>
+    <% } %>
+</section>

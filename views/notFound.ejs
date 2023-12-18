@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+
+<header>
+    <%- include('layouts/navBar') -%>
+</header>
+
+<main class="container my-5 py-5">
+    <div class="row justify-content-center align-items-center flex-center text-center d-flex mx-auto" style="height: 70vh;">
+        <div class="col-lg-8">
+            <img src="https://property.ca/static/images/404_illustration_property.png"
+                 class="w-50"
+                 alt="Page Not found"
+            />
+            <h1 class="fw-bold display-3">Page Not found</h1>
+            <p>
+                Page is either broken or missing, please try another link or <a href="/contact">contact</a> support.
+            </p>
+        </div>
+    </div>
+</main>
+
+<%- include('layouts/footer') -%>
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

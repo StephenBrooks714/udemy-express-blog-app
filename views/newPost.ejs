@@ -1,0 +1,35 @@
+<!doctype HTML>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<%- include('layouts/navBar') -%>
+<!--main body-->
+<main class="container">
+    <div class="row justify-content-center align-items-center text-center d-flex mx-auto flex-center" style="margin-top: 140px; margin-bottom: 70px;">
+        <div class="col-lg-8">
+            <h1 class="mb-3">Create a new post</h1>
+            <form action="/store/post" method="post" enctype="multipart/form-data">
+                <input type="text" name="title" id="title" placeholder="Your Post Title" class="form-control mb-3" required />
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>First Image</p>
+                        <input type="file" name="image" id="image" placeholder="Post Image" class="form-control mb-3" accept="image/*" required />
+                    </div>
+                    <div class="col-md-6">
+                        <p>Second Image</p>
+                        <input type="file" name="image2" id="image2" placeholder="Post Image" class="form-control mb-3" accept="image/*" required />
+                    </div>
+                </div>
+                <textarea name="body" id="body" placeholder="Your Post Details" class="form-control mb-3" rows="7" required></textarea>
+                <button class="btn btn-primary mr-2" type="submit">submit post</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<!--main body-->
+<%- include('layouts/footer') -%>
+</body>
+<!--scripts-->
+<%- include('layouts/scripts') -%>
+</html>
